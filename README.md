@@ -8,7 +8,7 @@ Tested on: **STM32F405RGT6**
 
 ## Credits
 
-This driver was written with heavy reference to the I2C implementation by [DuePonto](https://github.com/DuePonto/BMP388-STM32-HAL). The register definitions, configuration logic, and compensation formulas are largely derived from that work — the primary contribution here is the SPI transport layer and associated HAL wiring.
+This driver was written with heavy reference to the I2C implementation by [DuePonto](https://github.com/DuePonto/BMP388-STM32-HAL). The register definitions, configuration logic, and compensation formulas are largely derived from that work. The primary contribution here is the SPI transport layer and associated HAL wiring.
 
 ---
 
