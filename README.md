@@ -18,7 +18,7 @@ This driver was written with heavy reference to the I2C implementation by [DuePo
 |---|---|---|
 | Interface | `HAL_I2C_Mem_Read/Write` | `HAL_SPI_TransmitReceive` |
 | Read addressing | Device address + reg | `reg \| 0x80` (bit 7 set) |
-| Dummy byte on read | No | Yes — 1 byte discarded via `HAL_SPI_TransmitReceive` |
+| Dummy byte on read | No | Yes - 1 byte discarded via `HAL_SPI_TransmitReceive` |
 | CS pin | Not required | Required (set in `BMP388Handle_TypeDef`) |
 
 > **Note:** The BMP388 requires a dummy byte to be discarded after the address phase on all SPI reads. This is handled internally — `BMP388_readRegister` and `BMP388_readBytes` both transmit a 2-byte buffer and discard `rxBuff[0]`, with real data starting at `rxBuff[1]`.
@@ -59,7 +59,7 @@ if (BMP388_Init(&bmp388) != HAL_OK) {
 }
 ```
 
-`BMP388_Init` will verify the chip ID, soft reset, read calibration data, and configure oversampling, IIR filter, ODR, and power mode automatically.
+`BMP388_Init` will verify the chip ID, perform a soft reset, read the calibration data, and automatically configure oversampling, IIR filter, ODR, and power mode.
 
 ### 5. Read pressure and temperature
 
